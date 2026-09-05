@@ -1,7 +1,3 @@
-def foo():
-    if True:
-        print("hi")
-    return 1
 # 🛡️ PyVscan
 
 ### An Automated OWASP Top 10 Web Application Security Auditor
