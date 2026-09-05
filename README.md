@@ -60,26 +60,39 @@ HTTP logs.
 ```bash
 git clone https://github.com/mstnisa/pyvscan.git
 cd pyvscan
+```
+
+**On Kali Linux / Debian-based systems**, the system Python is
+"externally managed" (PEP 668), so installing packages directly with `pip`
+will fail. Use a virtual environment instead:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+(Re-run `source venv/bin/activate` in every new terminal session before
+using PyVscan.) On other systems a plain `pip install -r requirements.txt`
+works fine too.
 
 Run a basic scan:
 
 ```bash
-python pyvscan.py --url http://localhost:8080
+python3 pyvscan.py --url http://localhost:8080
 ```
 
 Limit crawl depth and scan an authenticated area using an active session
 cookie:
 
 ```bash
-python pyvscan.py --url http://localhost:8080 --depth 2 --cookie "PHPSESSID=abc123xyz"
+python3 pyvscan.py --url http://localhost:8080 --depth 2 --cookie "PHPSESSID=abc123xyz"
 ```
 
 Custom output path and a JSON summary printed to the terminal:
 
 ```bash
-python pyvscan.py --url http://localhost:8080 --output my_report.html --json
+python3 pyvscan.py --url http://localhost:8080 --output my_report.html --json
 ```
 
 | Flag | Description | Default |
