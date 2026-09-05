@@ -58,7 +58,7 @@ HTTP logs.
 ## Installation & Usage
 
 ```bash
-git clone https://github.com/<your-username>/pyvscan.git
+git clone https://github.com/mstnisa/pyvscan.git
 cd pyvscan
 pip install -r requirements.txt
 ```
